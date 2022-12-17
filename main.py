@@ -1,6 +1,7 @@
 import json
 import time
 import pathlib
+import shutil
 
 
 def main():
@@ -23,29 +24,11 @@ def main():
             answer_path = answers_path / f'{i}.txt'
             with open(answer_path, 'w') as f:
                 f.write(test['output'])
-
-        # create c++ file for each task
-        cpp_path = task_path / f'main.cpp'
-        # read template
-        with open('template.cpp', 'r') as f:
-            template = f.read()
-
-        with open(cpp_path, 'w') as f:
-            f.write(template)
-        # create test_template.py for each task
-        test_path = task_path / f'test.py'
-        # read template
-        with open('test_template.py', 'r') as f:
-            template = f.read()
-        with open(test_path, 'w') as f:
-            f.write(template)
-        # create run.py for each task
-        run_path = task_path / f'run.py'
-        # read template
-        with open('run_template.py', 'r') as f:
-            template = f.read()
-        with open(run_path, 'w') as f:
-            f.write(template)
+        # copy all files from templates to task directory
+        for file in base_path.glob('templates/*'):
+            file_path = task_path / file.name
+            if not file_path.exists() and not file.as_posix().endswith('.old') and file.name != 'debug.cpp':
+                shutil.copy(base_path / 'templates' / file, file_path)
 
 
 if __name__ == '__main__':

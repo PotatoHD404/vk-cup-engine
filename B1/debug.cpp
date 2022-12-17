@@ -1,7 +1,3 @@
-#include <iostream>
-
-using namespace std;
-
 namespace Color {
     enum Code {
         FG_RED = 31,
@@ -59,42 +55,18 @@ string to_string(A v) {
     return res;
 }
 
-class Log {
-public:
-    Color::Modifier red = Color::Modifier(Color::FG_RED);
-    Color::Modifier def = Color::Modifier(Color::FG_DEFAULT);
 
-    Log(const string &funcName) {
-#if defined LOCAL
-        system(("chcp "s + to_string(CP_UTF8) + ">nul 2>nul"s).c_str());
-        cout << red << funcName << ": ";
-#endif
-    }
-
-    template<typename T>
-    Log &operator<<(const T &v) {
-#if defined LOCAL
-        cout << to_string(v);
-#endif
-        return *this;
-    }
-
-    Log &operator<<(ostream &(*os)(ostream &)) {
-#if defined LOCAL
-        cout << os;
-#endif
-        return *this;
-    }
-
-
-    ~Log() {
-#if defined LOCAL
-        cout << def << endl;
-#endif
-    }
-};
-
-int main() {
-
-    return 0;
+void debug_out() { cerr << endl; }
+template <typename Head, typename... Tail>
+void debug_out(Head H, Tail... T) {
+  cerr << " " << to_string(H);
+  debug_out(T...);
 }
+#ifdef LOCAL
+Color::Modifier red = Color::Modifier(Color::FG_RED);
+Color::Modifier def = Color::Modifier(Color::FG_DEFAULT);
+#define debug(...) cerr << red << "[" << #__VA_ARGS__ << "]:", debug_out(__VA_ARGS__) << def << endl;
+#else
+#define debug(...) 42
+#endif
+

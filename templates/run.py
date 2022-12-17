@@ -1,11 +1,7 @@
-# create script that will compile and run all tasks
-
-# Path: run.py
-
 import subprocess
 import pathlib
 import os
-from test import test_all
+from lib import test_all
 
 
 def main():
