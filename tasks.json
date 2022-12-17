@@ -1,0 +1,98 @@
+{
+    "A": [
+        {
+            "input": "4\n20\n30\n50\n100\n",
+            "output": "19\n28\n47\n96\n"
+        },
+        {
+            "input": "5\n1\n2\n3\n4\n5\n",
+            "output": "0\n1\n2\n3\n4\n"
+        },
+        {
+            "input": "8\n5\n9\n10\n15\n17\n18\n19\n22\n",
+            "output": "4\n7\n8\n11\n12\n13\n14\n15\n"
+        }
+    ],
+    "B1": [
+        {
+            "input": "1\n6\n",
+            "output": "0\n16\n33\n50\n66\n83\n100\n"
+        },
+        {
+            "input": "2\n100 500\n",
+            "output": "0\n95\n96\n97\n98\n99\n100\n"
+        },
+        {
+            "input": "4\n1000 2 2 998\n",
+            "output": "0\n50\n99\n100\n"
+        },
+        {
+            "input": "6\n170 130 400 256 30 100\n",
+            "output": "0\n17\n43\n44\n84\n90\n99\n100\n"
+        }
+    ],
+    "B2": [
+        {
+            "input": "1\n6\n",
+            "output": "0\n16\n33\n50\n66\n83\n100\n"
+        },
+        {
+            "input": "2\n100 500\n",
+            "output": "0\n95\n96\n97\n98\n99\n100\n"
+        },
+        {
+            "input": "4\n10000000000 2 2 9999999998\n",
+            "output": "0\n50\n99\n100\n"
+        },
+        {
+            "input": "6\n170 130 400 256 30 100\n",
+            "output": "0\n17\n43\n44\n84\n90\n99\n100\n"
+        }
+    ],
+    "C1": [
+        {
+            "input": "3\n9\n1 1 3 4 6 6 6 8 10\n6\n1 2 3 4 5 6\n5\n10 10 10 10 10",
+            "output": "5\n6\n2\n"
+        }
+    ],
+    "C2": [
+        {
+            "input": "3\n9\n1 1 3 4 6 6 6 8 10\n6\n1 2 3 4 5 6\n5\n10 10 10 10 10",
+            "output": "5\n6\n2\n"
+        }
+    ],
+    "D1": [
+        {
+            "input": "JD 7S 9S JS 8S 9D 6D 8C 8D TH KS QD QH TD 6C AD KD AC\nKH QC 9H 6H KC 9C JC TS 6S QS TC JH 7D 7H AS AH 7C 8H\n",
+            "output": "Alice\n"
+        },
+        {
+            "input": "7S KD 8C AH QS AC KS JC 6C 7D 9H TS 7C 6D JH JD 6S KC\n8D QD AS TD AD TH KH 9S JS 9C QC 8S 8H 7H TC QH 9D 6H\n",
+            "output": "Bob\n"
+        },
+        {
+            "input": "6C 7S 6H KS 9C 6S QS 7C TS JD 8H KC 9D 8C 7H KD JC QC\n6D TH TD AD JS 9H TC QD 8D AC JH AH KH AS 7D 8S 9S QH\n",
+            "output": "Alice\n"
+        },
+        {
+            "input": "JS KS JD TH KH JC KC QD AS JH 6H 9H 7H 6C 9D AC 6D 9S\n8D 8H 7C 7S KD 7D 6S QH 8C TS AD TD TC 9C QC 8S QS AH\n",
+            "output": "Bob\n"
+        },
+        {
+            "input": "6S KC TD 8S AC 9S KD TS TH 7D 7C KH TC QC JH QD JC JD\nQH AS 9H 6C 8C 9C 6D AH AD KS JS 7H 6H 8H 9D QS 7S 8D\n",
+            "output": "Bob\n"
+        }
+    ],
+    "D2": [
+        {
+            "input": "2\n",
+            "output": "KS QD 8D QC 8S 8C JD 9H AC TH 9S 9D QH 7H 8H TS 7S 9C\n6D JS 7D KH QS TC AD AS KC 6C 7C TD AH KD 6S JC JH 6H\n\nJC JS 8S TD JD KH 7D 9C KC TH QD 8D 7H TC KD 9H 8C 6D\n7S AC QH AD 8H TS 6H JH 6C AH 7C 6S 9D QC AS QS KS 9S\n"
+        }
+    ],
+    "D3": [
+        {
+            "input": "2\n",
+            "output": "KS QD 8D QC 8S 8C JD 9H AC TH 9S 9D QH 7H 8H TS 7S 9C\n6D JS 7D KH QS TC AD AS KC 6C 7C TD AH KD 6S JC JH 6H\n\nJC JS 8S TD JD KH 7D 9C KC TH QD 8D 7H TC KD 9H 8C 6D\n7S AC QH AD 8H TS 6H JH 6C AH 7C 6S 9D QC AS QS KS 9S\n"
+        }
+    ]
+}
